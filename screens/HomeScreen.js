@@ -7,10 +7,11 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Slider,
 } from 'react-native';
 import { WebBrowser } from 'expo';
-
 import { MonoText } from '../components/StyledText';
+import { MoodSlider } from '../components/MoodSlider';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -19,11 +20,14 @@ export default class HomeScreen extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View style={styles.container}>  
+        <MoodSlider/>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
           <View style={styles.welcomeContainer}>
+           
           </View>
         </ScrollView>
+        
       </View>
     );
   }
