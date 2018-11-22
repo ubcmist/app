@@ -13,15 +13,17 @@ import { WebBrowser } from 'expo';
 import { MonoText } from '../components/StyledText';
 import { MoodSlider } from '../components/MoodSlider';
 import { Bitmoji } from '../components/Bitmoji';
+import { AppHeader } from '../components/AppHeader';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-    header: null,
+    header: 'Home',
   };
 
   render() {
     return (
       <View style={styles.container}>
+        <AppHeader title='Good Morning, Dominic'/>
         <ScrollView contentContainerStyle={styles.contentContainer}>
           <Text style={styles.howDoYouFeelText}>How do you feel?</Text>
           <View style={styles.sliders}>
