@@ -1,6 +1,6 @@
 import React from 'react';
 import { Platform } from 'react-native';
-import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
+import { createDrawerNavigator } from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
@@ -28,6 +28,7 @@ const Links =  {
   screen: LinksScreen,
   navigationOptions : {
     drawerLabel: 'Links',
+    header: props => <AppHeader {...props} />,
     drawerIcon: ({ focused }) => (
       <TabBarIcon
         focused={focused}
@@ -41,6 +42,7 @@ const Settings = {
   screen: SettingsScreen,
   navigationOptions  : {
     drawerLabel: 'Settings',
+    header: props => <AppHeader {...props} />,
     drawerIcon: ({ focused }) => (
       <TabBarIcon
         focused={focused}

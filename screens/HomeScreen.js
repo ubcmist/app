@@ -11,15 +11,17 @@ import {
 import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
+import AppHeader from '../components/AppHeader';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-    header: null,
+    header: 'Home',
   };
 
   render() {
     return (
       <View style={styles.container}>
+        <AppHeader title='Good Morning, Dominic'></AppHeader>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
           <View style={styles.welcomeContainer}>
             <Image
