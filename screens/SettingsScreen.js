@@ -15,7 +15,7 @@ export default class SettingsScreen extends React.Component {
       <View>
           <AppHeader title='Settings'></AppHeader>
           <ScrollView>
-            <ExpoConfigView/>;
+            <ExpoConfigView/>
           </ScrollView>
       </View>
     );
