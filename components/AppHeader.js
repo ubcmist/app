@@ -30,11 +30,6 @@ export default class AppHeader extends React.Component {
         </View>
     );
   }
-
-  _openNav() {
-    console.log(this.props)
-
-  }
 }
 
 const { StatusBarManager } = NativeModules;
