@@ -1,37 +1,52 @@
 import React from 'react';
-import { View, StyleSheet, Text, StatusBar, Platform } from 'react-native';
+import { View, StyleSheet, Text, StatusBar, Platform, NativeModules  } from 'react-native';
 import { Icon } from 'expo';
+
+
 export default class AppHeader extends React.Component {
   render() {
     return (
         <View style={styles.container}>
             <View style={styles.innerContainer}>
+              <View style={{ flex: 1, paddingLeft: 20 }}>
                 <Icon.Ionicons
-                    name='md-menu'
-                    size={35}
-                    style={styles.menuIcon}
-                    color='white'
+                  name='md-menu'
+                  size={35}
+                  style={styles.menuIcon}
+                  color='white'
                 />
+              </View>
+              <View style={{ flex: 6, paddingRight: 10 }}>
                 <Text style={styles.title}>{this.props.title}</Text>
+              </View>
+              <View
+                style={{ flex: 1, paddingRight: 10 }}>
+              </View>
+              
+                
+                
             </View>
         </View>
     );
   }
   
 }
+
+const { StatusBarManager } = NativeModules;
+
 const styles = StyleSheet.create({
     container: {
-      height: Platform.OS ? 70 : 60,
+      height: 80,
       backgroundColor: '#2699fb',
-      alignItems: 'center',
     },
     innerContainer : {
+      flex: 1,
       flexDirection: 'row', 
       alignItems: 'center',
-      justifyContent: 'center',
+      justifyContent: 'space-between',
       height: '100%',
       width: '100%',
-      paddingTop:  Platform.OS ? 15 : StatusBar.currentHeight
+      paddingTop: Platform.OS === 'ios' ? 18 : StatusBarManager.HEIGHT
     },
     title : {
       fontSize: 20,
@@ -39,9 +54,7 @@ const styles = StyleSheet.create({
       textAlign: "center"
     },
     menuIcon : {
-        justifyContent: 'center', alignItems: 'center',
-        top: 24, left: 20, right: 0, bottom: 0,
-      position: 'absolute',
+       
 
     }
 })

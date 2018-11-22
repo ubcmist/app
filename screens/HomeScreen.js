@@ -21,7 +21,7 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <AppHeader title='Good Morning, Dominic'></AppHeader>
+        <AppHeader title='Good Morning, Dominic'/>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
           <View style={styles.welcomeContainer}>
             <Image
