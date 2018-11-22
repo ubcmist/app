@@ -16,6 +16,7 @@ export default class MoodSlider extends React.Component {
           minimumTrackTintColor='#2699fb'
           maximumTrackTintColor='#bce0fd'
           thumbTintColor='#2699fb'
+          style={styles.sliderBar}
         />
         <View  style={styles.textContainer}>
           <Text style={styles.sliderText}>
@@ -32,9 +33,10 @@ export default class MoodSlider extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    marginLeft: 10,
-    marginRight: 10,
+    marginLeft: 30,
+    marginRight: 30,
+    marginBottom: 5,
+    marginTop: 5,
     alignItems: "stretch",
     justifyContent: "center",
   },
@@ -45,8 +47,12 @@ const styles = StyleSheet.create({
   },
 
   sliderText: {
-    fontSize: 20,
+    fontSize: 15,
     color: '#2699fb'
+  },
+
+  sliderBar: {
+    marginBottom: -10
   }
 });
 
