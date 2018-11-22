@@ -19,10 +19,10 @@ export default class MoodSlider extends React.Component {
         />
         <View  style={styles.textContainer}>
           <Text style={styles.sliderText}>
-            Very Anxious
+            {this.props.left}
           </Text>
           <Text style={styles.sliderText}>
-            Totally Relaxed
+            {this.props.right}
           </Text>
         </View>
       </View>

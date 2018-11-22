@@ -21,10 +21,11 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>  
-        <MoodSlider/>
+       
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-          <View style={styles.welcomeContainer}>
-           
+          <View style={styles.sliders}>
+            <MoodSlider left='Very Anxious' right='Relaxed'/>
+            <MoodSlider left='Very Tired' right='Energized'/>
           </View>
         </ScrollView>
         
