@@ -1,15 +1,19 @@
 import React from 'react';
-import { View, StyleSheet, Text, StatusBar, Platform, NativeModules  } from 'react-native';
+import { View, StyleSheet, Text, Platform, NativeModules  } from 'react-native';
 import { Icon } from 'expo';
+import { withNavigation } from 'react-navigation';
+import MainTabNavigator from '../navigation/MainTabNavigator';
 
 
 export default class AppHeader extends React.Component {
+    
   render() {
     return (
         <View style={styles.container}>
             <View style={styles.innerContainer}>
               <View style={{ flex: 1, paddingLeft: 20 }}>
                 <Icon.Ionicons
+                  onPress={() => this.props.navigation.openDrawer()}
                   name='md-menu'
                   size={35}
                   style={styles.menuIcon}
@@ -25,6 +29,11 @@ export default class AppHeader extends React.Component {
             </View>
         </View>
     );
+  }
+
+  _openNav() {
+    console.log(this.props)
+
   }
 }
 

@@ -1,13 +1,9 @@
 import React from 'react';
 import {
-  Image,
-  Platform,
   ScrollView,
   StyleSheet,
   Text,
-  TouchableOpacity,
   View,
-  Slider,
 } from 'react-native';
 import { WebBrowser } from 'expo';
 import { MonoText } from '../components/StyledText';
@@ -16,16 +12,15 @@ import { Bitmoji } from '../components/Bitmoji';
 import { AppHeader } from '../components/AppHeader';
 
 export default class HomeScreen extends React.Component {
-  static navigationOptions = {
-    header: 'Home',
-  };
 
   render() {
+
     return (
+      
       <View style={styles.container}>
-        <AppHeader title='Good Morning, Dominic'/>
+        <AppHeader title='Good Morning, Dominic' navigation={this.props.navigation}/>
         <ScrollView contentContainerStyle={styles.contentContainer}>
-          <Text style={styles.howDoYouFeelText}>How do you feel?</Text>
+          <Text  style={styles.howDoYouFeelText}>How do you feel?</Text>
           <View style={styles.sliders}>
             <MoodSlider left='Very Anxious' right='Relaxed'/>
             <MoodSlider left='Very Tired' right='Energized'/>

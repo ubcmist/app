@@ -28,7 +28,6 @@ const Links =  {
   screen: LinksScreen,
   navigationOptions : {
     drawerLabel: 'Links',
-    header: props => <AppHeader {...props} />,
     drawerIcon: ({ focused }) => (
       <TabBarIcon
         focused={focused}
@@ -42,7 +41,6 @@ const Settings = {
   screen: SettingsScreen,
   navigationOptions  : {
     drawerLabel: 'Settings',
-    header: props => <AppHeader {...props} />,
     drawerIcon: ({ focused }) => (
       <TabBarIcon
         focused={focused}
