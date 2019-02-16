@@ -39,8 +39,8 @@ TaskManager.defineTask('firstTask', ({ data, error }) => {
 
 
 
-
-
-
-
 export default ExpoLocation
+
+
+
+
